@@ -1,11 +1,8 @@
 <?php
 namespace App\Services;
 
-use App\Models\Country;
 use App\Validators\CountryValidator;
 use App\Repositories\CountryRepository;
-use Exception;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 final class CreateCountryService implements ServiceInterface
@@ -23,9 +20,9 @@ final class CreateCountryService implements ServiceInterface
         $countryValidator->validate();
 
         $countryRepository = new CountryRepository();
-        $country = new Country($data);
+
         DB::beginTransaction();
-        $country = $countryRepository->create($country);
+        $country = $countryRepository->create($data);
 
         // if(empty($country) || !AuthorizeTransactionService::run()) {
         //     DB::rollBack();

@@ -28,6 +28,6 @@ services:
       - ${APP_NAME}_network
 
 networks:
-  creadisis-app_network:
+  credisis_network:
     name: ${APP_NAME}_network
     driver: bridge
