@@ -1,5 +1,8 @@
 
-
+## Technologies Used
+* PHP 7.4 with Laravel 8
+* Mysql
+* Docker
 ## Configuring and running
     cp env.example .env
     docker-compose up -d
