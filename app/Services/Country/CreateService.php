@@ -1,20 +1,22 @@
 <?php
-namespace App\Services;
+namespace App\Services\Country;
 
+use App\Models\Country;
 use App\Validators\CountryValidator;
 use App\Repositories\CountryRepository;
+use App\Services\ServiceInterface;
 use Illuminate\Support\Facades\DB;
 
-final class CreateCountryService implements ServiceInterface
+final class CreateService implements ServiceInterface
 {
 
     /**
      * Create a Country
      *
      * @param array $data
-     * @return void
+     * @return Country
      */
-    public static function run($data): bool
+    public static function run($data): Country
     {
         $countryValidator = new CountryValidator($data);
         $countryValidator->validate();
@@ -31,7 +33,7 @@ final class CreateCountryService implements ServiceInterface
         DB::commit();
 
 
-        return true;
+        return $country;
     }
 
 }

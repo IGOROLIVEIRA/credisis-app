@@ -13,8 +13,8 @@ class CountryValidator extends BaseValidator
     public function rules()
     {
         return [
-            'name' => 'required|string|min:2|max:255',
-            'initials' => 'required|string|min:2|max:2',
+            'name' => 'required|string|min:2|max:255|unique:countries,name',
+            'initials' => 'required|string|min:2|max:2|unique:countries,initials',
         ];
     }
 }

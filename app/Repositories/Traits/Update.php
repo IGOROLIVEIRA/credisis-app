@@ -12,11 +12,12 @@ trait Update
      * @param array $data
      * @param int|string $id
      * @param string $field
-     * @return bool
+     * @return ?Model
      */
-    public function update(array $data, $id, $field = "id"): bool
+    public function update(array $data, $id, $field = "id"): ?Model
     {
-        return $this->entity->where($field, '=', $id)->update($data);
+        $this->entity->where($field, '=', $id)->update($data);
+        return $this->entity->find($id);
     }
 
 }

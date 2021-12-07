@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/country', [CountryController::class, 'create']);
 Route::get('/country', [CountryController::class, 'list']);
+Route::put('/country', [CountryController::class, 'list']);
+Route::put('/country/{id}', [CountryController::class, 'update']);
