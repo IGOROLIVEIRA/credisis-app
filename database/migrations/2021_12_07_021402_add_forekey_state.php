@@ -28,7 +28,7 @@ class AddForekeyState extends Migration
     public function down()
     {
         Schema::table('states', function (Blueprint $table) {
-            $table->dropForeign('states_country_id_id_foreign');
+            $table->dropForeign('states_country_id_foreign');
             $table->dropColumn(['country_id']);
         });
     }

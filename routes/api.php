@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\StateController;
+use App\Http\Controllers\CityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,8 @@ Route::post('/state', [StateController::class, 'create']);
 Route::get('/state', [StateController::class, 'list']);
 Route::put('/state/{id}', [StateController::class, 'update']);
 Route::delete('/state/{id}', [StateController::class, 'destroy']);
+
+Route::post('/city', [CityController::class, 'create']);
+Route::get('/city', [CityController::class, 'list']);
+Route::put('/city/{id}', [CityController::class, 'update']);
+Route::delete('/city/{id}', [CityController::class, 'destroy']);
