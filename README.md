@@ -4,25 +4,22 @@
     `cp env.example .env`
     `docker-compose up -d`
 
-## Running migrations
+## Running migrations (inside the *_app container)
     `php artisan migrate`
-### To clear database and run all
+### To clear database and run all (inside the *_app container)
     `php artisan migrate:fresh`
 
-## Running Seeders
-    `php artisan db:seed`
+## Running Seeders (inside the *_app container)
+    `php artisan db:seed` 
     
-## Starting queue to listen
+## Starting queue to listen (inside the *_app container)
     `php artisan queue:listen`
 
-## Running tests
+## Running tests (inside the *_app container)
     `php artisan test --filter Transfer`
 
 ## Stopping containers
     `docker-compose down`
 
 ## Endpoint for api
-- This endpoint is based on the default configurations inside the env-example
-`http://localhost:80/api/state/`
-`http://localhost:80/api/country/`
-`http://localhost:80/api/city/`
+- Import the file Insomnia.json in Insomina for access valid endpoints 
