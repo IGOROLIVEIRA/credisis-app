@@ -50,7 +50,7 @@ final class CreateTransferService implements ServiceInterface
         }
 
         if($data['data']['type'] != 'credit' && $data['data']['type'] != 'debit') {
-            throw new Exception("Incorrect type use CREDIT or DEBIT.");
+            throw new Exception("Incorrect type use credit or debit.");
         }
 
         $lounchCredit = [

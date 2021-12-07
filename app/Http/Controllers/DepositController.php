@@ -16,7 +16,7 @@ class DepositController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function transfer(Request $request, $user_id)
+    public function deposit(Request $request, $user_id)
     {
         try{
             $lounch = CreateDepositService::run(["data" => $request->all(), "id" => $user_id]);

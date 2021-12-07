@@ -3,7 +3,7 @@ namespace App\Services\Lounch;
 
 use App\Models\Lounch;
 use App\Repositories\UserAccountRepository;
-use App\Validators\LounchValidator;
+use App\Validators\DepositValidator;
 use App\Repositories\LounchRepository;
 use App\Services\ServiceInterface;
 use Exception;
@@ -22,7 +22,7 @@ final class CreateDepositService implements ServiceInterface
     public static function run($data): bool
     {
         $lounchRepository = new LounchRepository();
-        $lounchValidator = new LounchValidator($data['data']);
+        $lounchValidator = new DepositValidator($data['data']);
         $lounchValidator->validate();
 
         DB::beginTransaction();
@@ -40,8 +40,8 @@ final class CreateDepositService implements ServiceInterface
             throw new Exception("Debit account not found.");
         }
 
-        if($data['data']['type'] != 'credit' && $data['data']['type'] != 'debit') {
-            throw new Exception("Incorrect type use CREDIT or DEBIT.");
+        if($data['data']['type'] != 'debit') {
+            throw new Exception("Incorrect type use debit.");
         }
 
         $lounchDebit = [
