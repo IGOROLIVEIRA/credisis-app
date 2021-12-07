@@ -3,6 +3,7 @@
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\TransferController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,5 @@ Route::post('/city', [CityController::class, 'create']);
 Route::get('/city', [CityController::class, 'list']);
 Route::put('/city/{id}', [CityController::class, 'update']);
 Route::delete('/city/{id}', [CityController::class, 'destroy']);
+
+Route::post('/transfer/{user_id}', [TransferController::class, 'transfer']);
