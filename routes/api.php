@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\StateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/country', [CountryController::class, 'create']);
 Route::get('/country', [CountryController::class, 'list']);
-Route::put('/country', [CountryController::class, 'list']);
 Route::put('/country/{id}', [CountryController::class, 'update']);
 Route::delete('/country/{id}', [CountryController::class, 'destroy']);
+
+Route::post('/state', [StateController::class, 'create']);
+Route::get('/state', [StateController::class, 'list']);
+Route::put('/state/{id}', [StateController::class, 'update']);
+Route::delete('/state/{id}', [StateController::class, 'destroy']);
