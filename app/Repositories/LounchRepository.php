@@ -7,11 +7,12 @@ use App\Repositories\Traits\Create;
 use App\Repositories\Traits\Find;
 use App\Repositories\Traits\FindAll;
 use App\Repositories\Traits\FindBy;
+use App\Repositories\Traits\Where;
 
 final class LounchRepository extends BaseRepository
 {
 
-    use Find, Create, FindAll, FindBy;
+    use Find, Create, FindAll, FindBy, Where;
     /**
      * create a isntance of Lounch for entiry
      *

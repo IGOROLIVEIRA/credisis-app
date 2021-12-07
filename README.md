@@ -16,7 +16,7 @@
     `php artisan queue:listen`
 
 ## Running tests (inside the *_app container)
-    `php artisan test --filter Transfer`
+    `php artisan test --filter Lounch`
 
 ## Stopping containers
     `docker-compose down`

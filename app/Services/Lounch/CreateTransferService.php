@@ -37,7 +37,7 @@ final class CreateTransferService implements ServiceInterface
         $lot = (string) Uuid::uuid4();
 
         if($accountCredit==null){
-            throw new Exception("redit account not found.");
+            throw new Exception("Credit account not found.");
         }
 
         if($accountCredit->balance < $value){

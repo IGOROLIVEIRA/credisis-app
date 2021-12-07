@@ -4,6 +4,7 @@ use App\Http\Controllers\CountryController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\DepositController;
+use App\Http\Controllers\StatementBalanceController;
 use App\Http\Controllers\TransferController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -40,3 +41,4 @@ Route::delete('/city/{id}', [CityController::class, 'destroy']);
 
 Route::post('/transfer/{user_id}', [TransferController::class, 'transfer']);
 Route::post('/deposit/{user_id}', [DepositController::class, 'deposit']);
+Route::get('/statement/{user_id}', [StatementBalanceController::class, 'statement']);

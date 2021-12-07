@@ -204,3 +204,4 @@
 2021-12-06 21:08:02,584 INFO spawned: 'php-fpm_00' with pid 11
 2021-12-06 21:08:02,701 INFO success: nginx_00 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
 2021-12-06 21:08:02,702 INFO success: php-fpm_00 entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2021-12-07 20:45:30,337 INFO reaped unknown pid 444
