@@ -5,6 +5,7 @@ use App\Models\Country;
 use App\Validators\CountryValidator;
 use App\Repositories\CountryRepository;
 use App\Services\ServiceInterface;
+use Exception;
 use Illuminate\Support\Facades\DB;
 
 final class DeleteService implements ServiceInterface
@@ -18,12 +19,12 @@ final class DeleteService implements ServiceInterface
      */
     public static function run($data): bool
     {
-        $countryValidator = new CountryValidator($data['data']);
-        $countryValidator->validate();
-
-        $countryRepository = new CountryRepository();
-
         DB::beginTransaction();
+        $countryRepository = new CountryRepository();
+        $country = $countryRepository->find($data['id']);
+        if($country==null){
+            throw new Exception("Country not found.");
+        }
         $country = $countryRepository->delete($data['id']);
         DB::commit();
 

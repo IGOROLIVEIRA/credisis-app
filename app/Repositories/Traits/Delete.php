@@ -4,7 +4,7 @@ namespace App\Repositories\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait Update
+trait Delete
 {
     /**
      * Delete a record
