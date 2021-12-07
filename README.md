@@ -28,18 +28,18 @@
 
 Statement Account
 
-```json
+`
 Method: GET
 Rount: http://localhost:8001/api/statement/{iduser}
 {
 	"date": "2021-12-11",
 	"user_account": "0000123-4"
 }
-```
+`
 
 Create Deposit
 
-```json
+`
 Method: POST
 Rount://localhost:8001/api/deposit/{iduser}
 Payload: {
@@ -49,11 +49,11 @@ Payload: {
 	"description": "Transferência para PinBom",
 	"system": "mobile"
 }
-```
+`
 
 Create Transfer
 
-```json
+`
 Method: POST
 Rount://localhost:8001/api/statement/{iduser}
 Payload: {
@@ -64,11 +64,11 @@ Payload: {
 	"description": "Transferência para PinBom",
 	"system": "mobile"
 }
-```
+`
 
 Country
 
-```json
+`
 // CREATE
 Method: POST
 Rount://localhost:8001/api/country/
@@ -100,11 +100,11 @@ Payload: {
 }
 	
 
-```
+`
 
 State
 
-```json
+`
 // CREATE
 Method: POST
 Rount://localhost:8001/api/state/
@@ -136,11 +136,11 @@ Rount://localhost:8001/api/state/
 Payload: {
 	
 }
-```
+`
 
 City
 
-```json
+`
 // CREATE
 Method: POST
 Rount://localhost:8001/api/city/
@@ -172,4 +172,4 @@ Rount://localhost:8001/api/city/
 Payload: {
 	
 }
-```
+`
