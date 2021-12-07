@@ -1,47 +1,46 @@
 
 
 ## Configuring and running
-    `cp env.example .env`
-    `docker-compose up -d`
+    cp env.example .env
+    docker-compose up -d
 
 ## Running migrations (inside the *_app container)
-    `php artisan migrate`
+    php artisan migrate
 ### To clear database and run all (inside the *_app container)
-    `php artisan migrate:fresh`
+    php artisan migrate:fresh
 
 ## Running Seeders (inside the *_app container)
-    `php artisan db:seed` 
+    php artisan db:seed 
     
 ## Starting queue to listen (inside the *_app container)
-    `php artisan queue:listen`
+    php artisan queue:listen
 
 ## Running tests (inside the *_app container)
-    `php artisan test --filter Lounch`
+    php artisan test --filter Lounch
 
 ## Stopping containers
-    `docker-compose down`
+    docker-compose down
 
 ## Endpoint for api
 - Import the file Insomnia.json in Insomina for access valid endpoints
 
-# End Points
 
 Statement Account
 
-`
+```
 Method: GET
 Rount: http://localhost:8001/api/statement/{iduser}
-{
+Payload: {
 	"date": "2021-12-11",
 	"user_account": "0000123-4"
 }
-`
+```
 
 Create Deposit
 
-`
+```
 Method: POST
-Rount://localhost:8001/api/deposit/{iduser}
+Rount: http://localhost:8001/api/deposit/{iduser}
 Payload: {
 	"value": 300.50,
 	"type": "debit",
@@ -49,13 +48,13 @@ Payload: {
 	"description": "Transferência para PinBom",
 	"system": "mobile"
 }
-`
+```
 
 Create Transfer
 
-`
+```
 Method: POST
-Rount://localhost:8001/api/statement/{iduser}
+Rount: http://localhost:8001/api/statement/{iduser}
 Payload: {
 	"value": 300,
 	"type": "credit",
@@ -64,14 +63,14 @@ Payload: {
 	"description": "Transferência para PinBom",
 	"system": "mobile"
 }
-`
+```
 
 Country
 
-`
+```
 // CREATE
 Method: POST
-Rount://localhost:8001/api/country/
+Rount: http://localhost:8001/api/country/
 Payload: {
 	"name": "Brasil",
 	"initials": "BR"
@@ -79,7 +78,7 @@ Payload: {
 
 // UPDATE
 Method: PUT
-Rount://localhost:8001/api/country/{ID}
+Rount: http://localhost:8001/api/country/{ID}
 Payload: {
 	"name": "Mexico",
 	"initials": "ME"
@@ -87,27 +86,27 @@ Payload: {
 
 // DELETE
 Method: DELETE
-Rount://localhost:8001/api/country/{ID}
+Rount: http://localhost:8001/api/country/{ID}
 Payload: {
 	
 }
 
 // LIST
 Method: GET
-Rount://localhost:8001/api/country/
+Rount: http://localhost:8001/api/country/
 Payload: {
 	
 }
 	
 
-`
+```
 
 State
 
-`
+```
 // CREATE
 Method: POST
-Rount://localhost:8001/api/state/
+Rount: http://localhost:8001/api/state/
 Payload: {
 	"name": "Brasilia",
 	"initials": "BB",
@@ -116,7 +115,7 @@ Payload: {
 
 // UPDATE
 Method: PUT
-Rount://localhost:8001/api/state/{ID}
+Rount: http://localhost:8001/api/state/{ID}
 Payload: {
 	"name": "Brasília",
 	"initials": "ME",
@@ -125,25 +124,25 @@ Payload: {
 
 // DELETE
 Method: DELETE
-Rount://localhost:8001/api/state/{ID}
+Rount: http://localhost:8001/api/state/{ID}
 Payload: {
 	
 }
 
 // LIST
 Method: GET
-Rount://localhost:8001/api/state/
+Rount: http://localhost:8001/api/state/
 Payload: {
 	
 }
-`
+```
 
 City
 
-`
+```
 // CREATE
 Method: POST
-Rount://localhost:8001/api/city/
+Rount: http://localhost:8001/api/city/
 Payload: {
 	"name": "Brasil1",
 	"population": "1",
@@ -152,7 +151,7 @@ Payload: {
 
 // UPDATE
 Method: PUT
-Rount://localhost:8001/api/city/{ID}
+Rount: http://localhost:8001/api/city/{ID}
 Payload: {
 	"name": "Brasil1",
 	"population": "1",
@@ -161,15 +160,15 @@ Payload: {
 
 // DELETE
 Method: DELETE
-Rount://localhost:8001/api/city/{ID}
+Rount: http://localhost:8001/api/city/{ID}
 Payload: {
 	
 }
 
 // LIST
 Method: GET
-Rount://localhost:8001/api/city/
+Rount: http://localhost:8001/api/city/
 Payload: {
 	
 }
-`
+```
